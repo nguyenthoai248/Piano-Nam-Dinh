@@ -1,0 +1,5 @@
+wp-content/uploads/
+wp-content/cache/
+wp-content/upgrade/
+node_modules/
+.env
