@@ -1,0 +1,9 @@
+{
+  "apiVersion": 2,
+  "name": "astra-child/piano-list",
+  "title": "Danh sách Piano",
+  "category": "widgets",
+  "icon": "admin-multisite",
+  "editorScript": "file:./edit.js",
+  "style": "file:./style.css"
+}

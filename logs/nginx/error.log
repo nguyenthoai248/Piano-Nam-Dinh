@@ -1,0 +1,2 @@
+2025/10/02 09:11:02 [error] 21448#840: *783 access forbidden by rule, client: 127.0.0.1, server: , request: "GET /wp-content/uploads/code-execution.php HTTP/1.1", host: "pianonamdinh.com.vn.local"
+2025/10/02 09:26:20 [error] 21448#840: *4911 access forbidden by rule, client: 127.0.0.1, server: , request: "GET /wp-content/uploads/htaccess/07/htaccess.php HTTP/1.1", host: "pianonamdinh.com.vn.local"

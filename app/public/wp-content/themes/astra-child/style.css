@@ -1,0 +1,461 @@
+/*
+Theme Name: Astra Child
+Template: astra
+Author: Nguyễn Văn Thoại
+Version: 1.0
+*/
+
+/* --- Topbar mặc định (desktop) --- */
+.site-topbar {
+  background: #edbd11; /* vàng */
+  color: #000; /* chữ đen cho dễ đọc */
+  font-size: 14px;
+}
+
+.site-topbar .topbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 15px;
+  gap: 15px;
+}
+
+.site-topbar .topbar-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.site-topbar .topbar-item a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.site-topbar .topbar-item a:hover {
+  text-decoration: underline;
+}
+
+/* --- Responsive (mobile dưới 768px) --- */
+@media (max-width: 768px) {
+  .site-topbar .topbar-inner {
+    flex-direction: column; /* xếp thành cột */
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .site-topbar .topbar-item {
+    font-size: 13px;
+  }
+
+  .site-topbar .topbar-item a {
+    font-size: 13px;
+  }
+}
+
+/* --- Main header --- */
+.site-mainheader {
+  background: #000; /* đen */
+}
+
+.site-mainheader {
+  position: relative;
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+/* Sticky header */
+.site-mainheader.sticky {
+  transform: translateY(0);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.site-mainheader .mainheader-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 12px 15px;
+}
+
+/* Logo */
+.site-mainheader .header-logo img {
+  max-height: 50px;
+}
+
+/* Search form */
+.site-mainheader .header-search {
+  flex: 1;
+  margin-left: 40px;
+}
+.site-mainheader .header-search form {
+  display: flex;
+}
+.site-mainheader .header-search input[type="search"] {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+}
+.site-mainheader .header-search button {
+  padding: 8px 14px;
+  border: 0.5px solid #ccc;
+  border-left: none;
+  background: #edbd11;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Header buttons */
+.site-mainheader .header-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.site-mainheader .header-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 14px;
+  padding: 6px 10px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+/* .site-mainheader .header-btn:hover {
+  background: #f5f5f5;
+  border-color: #ddd;
+} */
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .site-mainheader .mainheader-inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .site-mainheader .header-search {
+    order: 2;
+  }
+
+  .site-mainheader .header-buttons {
+    justify-content: space-around;
+  }
+}
+
+/* Custom search with dropdown */
+.custom-search-form {
+  display: flex;
+  align-items: center;
+  border: 1px solid #444;
+  border-radius: 6px; /* bo góc tổng thể */
+  overflow: hidden;
+  max-width: 400px;
+  width: 100%;
+  background: #fff;
+}
+
+/* Dropdown nhỏ hơn, bo góc chỉ bên trái */
+.custom-search-form .search-type {
+  flex: 0 0 auto;
+  width: 80px;
+  min-width: unset;
+  border: none;
+  padding: 0 8px;
+  background: #f9f9f9;
+  font-size: 14px;
+  height: 40px;
+  line-height: 40px;
+  cursor: pointer;
+  border-radius: 6px 0 0 6px; /* chỉ bo góc trái */
+}
+
+/* Input ở giữa, không bo góc */
+.custom-search-form .search-field {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 0 12px;
+  font-size: 14px;
+  color: #333;
+  height: 40px;
+  border-radius: 0; /* bỏ bo góc */
+}
+
+/* Nút search, chỉ bo góc bên phải */
+.custom-search-form .search-submit {
+  flex: 0 0 auto;
+  background: #edbd11;
+  border: none;
+  padding: 0 16px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #000;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 6px 6px 0; /* chỉ bo góc phải */
+}
+
+.custom-search-form .search-submit:hover {
+  background: #e6c900;
+}
+
+.custom-search-form .search-submit i {
+  font-size: 16px;
+}
+
+/* ===== Main Navigation ===== */
+.site-main-navigation {
+  background: #ffdd00;
+  /* border-top: 1px solid #e6c900; */
+}
+
+.site-main-navigation .main-menu {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-main-navigation .main-menu li {
+  margin: 0;
+  padding: 0;
+}
+
+.site-main-navigation .main-menu li a {
+  display: block;
+  padding: 14px 20px;
+  color: #000;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  /* transition: background 0.2s, color 0.2s; */
+}
+
+.site-main-navigation .main-menu li a:hover,
+.site-main-navigation .main-menu li.current-menu-item a {
+  background: #e6c900;
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .site-main-navigation .main-menu {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .site-main-navigation .main-menu li a {
+    padding: 12px 16px;
+    width: 100%;
+  }
+}
+
+/* Cơ bản cho menu chính */
+.site-main-navigation .main-menu {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.site-main-navigation .main-menu li {
+  position: relative;
+}
+.site-main-navigation .main-menu li a {
+  padding: 14px 18px;
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+}
+.site-main-navigation .main-menu li a:hover {
+  background: rgba(0,0,0,0.05);
+}
+
+/* Submenu cấp 1 → cấp 2: dropdown dọc */
+.site-main-navigation .main-menu li ul.sub-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  min-width: 200px;
+  z-index: 9999;
+  padding: 0;
+}
+.site-main-navigation .main-menu li:hover > ul.sub-menu {
+  display: block;
+}
+.site-main-navigation .main-menu li ul.sub-menu li {
+  position: relative;
+}
+.site-main-navigation .main-menu li ul.sub-menu li a {
+  padding: 10px 16px;
+  color: #333;
+  white-space: nowrap;
+}
+.site-main-navigation .main-menu li ul.sub-menu li a:hover {
+  background: rgba(0,0,0,0.05);
+}
+
+/* Nếu có cấp 3: submenu của submenu xổ dọc bên cạnh */
+.site-main-navigation .main-menu li ul.sub-menu li ul.sub-menu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  min-width: 200px;
+}
+.site-main-navigation .main-menu li ul.sub-menu li:hover > ul.sub-menu {
+  display: block;
+}
+.site-main-navigation .main-menu li ul.sub-menu li ul.sub-menu li a {
+  padding: 10px 16px;
+  color: #333;
+}
+.site-main-navigation .main-menu li ul.sub-menu li ul.sub-menu li a:hover {
+  background: rgba(0,0,0,0.05);
+}
+
+.main-menu,
+.main-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* Reset lại list-style */
+.main-menu,
+.main-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style chung cho menu */
+.main-menu li {
+  position: relative;
+}
+
+/* Thêm mũi tên cho item có submenu */
+.main-menu li.menu-item-has-children > a::after {
+  content: " ▼"; /* mũi tên xuống cho cấp 1 */
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+/* Với submenu ngang (cấp 2) thì dùng mũi tên sang phải */
+.main-menu ul li.menu-item-has-children > a::after {
+  content: " ›";
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+/* Bỏ gạch chân khi hover */
+.main-menu a {
+  text-decoration: none;
+}
+
+/* Submenu ẩn mặc định */
+.main-menu ul {
+  display: none;
+  position: absolute;
+  background: #fff;
+  padding: 10px 0;
+  min-width: 180px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  z-index: 999;
+}
+
+/* Hiện submenu khi hover */
+.main-menu li:hover > ul {
+  display: block;
+}
+
+/* Submenu cấp 2 hiển thị ngang */
+.main-menu > li > ul {
+  display: flex;
+  top: 100%;
+  left: 0;
+}
+
+/* Submenu cấp 3 hiển thị dọc dưới item cha */
+.main-menu ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  flex-direction: column;
+  margin-left: 2px;
+}
+
+.main-menu ul li:hover > ul {
+  display: flex;
+}
+
+/* Hero Banner */
+.hero-banner {
+  width: 100%;
+  background: #ffffff; /* fallback */
+}
+
+.hero-banner .hero-inner {
+  max-width: 1200px; /* đồng bộ với main-header-inner */
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.hero-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Hero Banner chỉnh chiều cao */
+.hero-banner .hero-inner img {
+  width: 100%;
+  max-height: 600px; /* giảm chiều cao, ví dụ 400px */
+  object-fit: cover; /* crop ảnh cho đẹp */
+  display: block;
+}
+
+/* Topbar mặc định */
+.site-topbar {
+  width: 100%;
+  background: #ffdd00;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  z-index: 1000;
+}
+
+/* Menu mặc định */
+.site-main-navigation {
+  width: 100%;
+  background: #ffdd00;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  z-index: 999;
+}
+
+/* Khi scroll xuống */
+.site-topbar.shrink,
+.site-main-navigation.shrink {
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none; /* tránh hover */
+}
