@@ -1,0 +1,1 @@
+#wpwrap .order-item-detail{float:right;line-height:1.3125em;padding:.5em}#wpwrap .order-item-detail.refund-status-pending:before{content:"⌛️ "}#wpwrap .order-item-detail.refund-status-pending{background:rgba(170,0,0,.067);color:#400}

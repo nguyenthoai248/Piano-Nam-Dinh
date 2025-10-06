@@ -1,0 +1,418 @@
+/**** Main container adjustments ****/
+
+.op-payment-widget-main-container {
+    display: block;
+    padding: 0px;
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+}
+
+/* apply a maximum width to the payment widget container and center in main container */
+.op-payment-widget-container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
+}
+
+/***** Payment method styling *****/
+
+/* Show a separator between payment methods except for the last one */
+.op-payment-widget-container > .available-network:not(:last-child) {
+    border-bottom: 1px solid rgba(0,0,0,0.10);
+}
+
+/* Show a pointing hand when hovering over unselected payment method */
+.op-payment-widget-container > .list:not(.selected) *:not(iframe):hover {
+    cursor: pointer;
+}
+
+/* Applies a basic grid layout to each payment method */
+.op-payment-widget-container > .available-network {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: minmax(45px, auto) auto;
+    justify-items: start;
+    align-items: center;
+    grid-column-gap: 0px;
+    min-height: 60px;
+}
+
+/* Show payment network label on left next to radio input */
+.op-payment-widget-container > .available-network .textLabel {
+    grid-area: 1 / 2 / 2 / 3;
+    width: 100%;
+    margin-left: 0px;
+}
+
+/* Show network logos on right hand side */
+.op-payment-widget-container > .available-network .imgLabel {
+    grid-area: 1 / 3 / 2 / 4;
+    width: auto;
+    display: flex;
+    min-width: 50px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* Show the radio input on the left  */
+.op-payment-widget-container > .available-network > div.list input[type='radio'] {
+    height: 12px;
+    grid-area: 1 / 1 / 2 / 2;
+    display: block;
+    margin-right: 10px;
+}
+
+/* Place the payment method form in grid row below the network labels */
+.op-payment-widget-container > .available-network .formContainer {
+    grid-area: 2 / 1 / 3 / 4;
+    margin: 0;
+    padding-left: 0rem;
+    padding-right: 0rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/***** Overrides for payment button *****/
+
+/* Normalise the pay button container */
+
+.submit-buttons-container {
+    width: 100%;
+}
+
+/* Makes the special buttons container a maximum of 500px, centrally aligned horizontally */
+.submitBtnContainerGroup {
+    width: 100%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Main button style */
+.submit-button {
+    display: block;
+    max-width: 500px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background: #2C2E2F;
+    background-image: none;
+    border: 0;
+    border-radius: 5px;
+    color: white;
+    transition: all .05s;
+    box-sizing: border-box;
+    height: 45px;
+    font-size: 1.2rem;
+}
+
+/* Apply effect for pay button on hover */
+.submit-button:not(.disabled):hover {
+    cursor: pointer;
+    background-color: #5b5b5b;
+    box-shadow: 0 4px 8px -4px #222;
+}
+
+/* Apply different style for disabled pay button */
+.submit-button.disabled {
+    opacity: .38;
+    cursor: default;
+}
+
+/* Paypal button container */
+
+/* Ensures that the Paypal button has same top and bottom margin as the regular pay button */
+#submitBtnContainerPAYPAL {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Credit card container and iframe */
+
+/* Iframe always covers the full height of the CVC for registered method */
+.op-payment-widget-container .formContainer iframe {
+    min-height: 90px;
+}
+
+/* For the full sized credit card form, apply a minimum height that covers all fields including error labels */
+.op-payment-widget-container > .available-network .formContainer iframe {
+    min-height: 360px;
+    max-height: 360px;
+}
+
+/* Make sure the credit card form uses full width of available space */
+#networkForm {
+    width: 100%;
+    padding-left: 2px;
+    padding-right: 2px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Ensure that forms are always full width */
+#networkForm .row .col {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Make sure the credit card form uses full width of available space */
+#networkForm .row .col3 {
+    height: 14px;
+}
+
+/* Reserve a fixed space for the error labels so that card form doesn't resize */
+#networkForm .row div {
+    margin: 3px 0;
+}
+
+/* Remove margins from input field */
+#networkForm .row .col input {
+    margin: 0;
+}
+
+/* Remove margins from error */
+.INFO, .ERROR {
+    margin-bottom: 0px;
+}
+
+/***** Registered methods (with allowDelete = true) ******/
+
+/* Adds divider and ensures minimum height of registered method  */
+.op-payment-widget-container div.list.registered-account-update {
+    border-bottom: 1px solid rgba(0,0,0,0.10);
+    min-height: 60px
+}
+
+/* Applies a grid layout to the registered method  */
+.op-payment-widget-container .account-inside-cont {
+    display: grid;
+    grid-template-columns: auto auto 1fr auto;
+    justify-items: start;
+    align-items: center;
+    max-width: 100%;
+}
+
+/* Shows the radio input on the left */
+.op-payment-widget-container .account-inside-cont input[type='radio'] {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+/* Shows the registered card icon next to radio input */
+.op-payment-widget-container .account-inside-cont label.imgLabel {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+/* Shows the registered card details filling available space */
+.op-payment-widget-container .account-inside-cont label.textLabel {
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+/* Shows the delete icon on the right hand side */
+.op-payment-widget-container .account-inside-cont .delete-account {
+    grid-area: 1 / 4 / 2 / 5;
+    margin-top: 0px;
+    margin-right: 10px;
+}
+
+/* Places the registered card CVC iframe in the row below */
+.op-payment-widget-container .account-inside-cont .formContainer {
+    grid-area: 2 / 1 / 3 / 5;
+    margin: 0;
+
+}
+
+/***** Registered methods (with allowDelete = false) ******/
+
+/* Shows the registered method in grid layout */
+.op-payment-widget-container .registered-account:not(.registered-account-update) {
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    justify-items: start;
+    align-items: center;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* Places radio input on left side */
+.op-payment-widget-container .registered-account:not(.registered-account-update)  input[type='radio'] {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+/* Places card network logo next to radio input */
+.op-payment-widget-container .registered-account:not(.registered-account-update)  label.imgLabel {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+/* Places card details across remaining space */
+.op-payment-widget-container .registered-account:not(.registered-account-update)  label.textLabel {
+    grid-area: 1 / 3 / 2 / 4;
+    width: auto;
+}
+
+/* Places card CVC iframe in row below */
+.op-payment-widget-container .registered-account:not(.registered-account-update)  .formContainer {
+    grid-area: 2 / 1 / 3 / 4;
+    margin: 0;
+}
+
+/****** Card form adjustments *******/
+
+/* Ensures hint icon has some space next to CVC input */
+#networkForm .hintIcon {
+    margin-left: 0.5rem;
+}
+
+/* Adjust label size */
+
+/* Makes the credit card form labels a little smaller */
+#networkForm label {
+    font-size: 0.85em;
+    font-weight: 300;
+}
+
+/* Change style of active / focussed inputs */
+#networkForm select:focus,
+#networkForm select:active,
+#networkForm input:focus,
+#networkForm input:active {
+    outline-width: 0;
+    border: 2px solid #5b5b5b;
+    box-shadow: none;
+}
+
+/* Clean up the font in select and input elements */
+#networkForm select,
+#networkForm input {
+    font-size: 1rem;
+    box-shadow: none;
+}
+
+/* Ensure card form has same font as payment widget */
+#networkForm * {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Change style of error inputs */
+
+/* Apply checkout error style to error labels on error */
+#networkForm .message.ERROR {
+    font-size: .75rem;
+    background: transparent;
+    color: #b71c1c;
+    padding-left: 0px;
+}
+
+/**** General look and feel adjustments ****/
+
+/* Adjust the default color of the loading spinner */
+.MuiCircularProgress-svg {
+    color: #5b5b5b;
+}
+
+/* Standardise registration label size on payment widget */
+
+.op-payment-widget-container .registration label {
+    font-size: 1rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+/* Hide the dotted separator between registered and available methods */
+.op-payment-widget-container .separator {
+    display: none;
+}
+
+/* make the logos a little smaller */
+.op-payment-widget-container .imgLabel img {
+    max-height: 28px;
+}
+
+/* remove the margin below registration checkboxes container */
+.op-payment-widget-container .options {
+    margin-bottom: 0;
+}
+
+.op-payment-widget-container > div.list.no-style {
+    margin: 1rem 0 1rem 0;
+}
+
+/***** Cardview specific overrides *****/
+
+/* Change the default styling of the card view 'cards' */
+.op-payment-widget-container.card-view>div.list {
+    border: none;
+    border-radius: 0px;
+    padding: 10px 0px;
+}
+
+/* Applies a separator between the payment method cards */
+.op-payment-widget-container.card-view>div.list:not(:last-child) {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Removes the shadow from selected card */
+.op-payment-widget-container.card-view>div.list.selected {
+    box-shadow: none;
+}
+
+/* Removes some padding */
+.op-payment-widget-container.card-view div.list.registered-account-update {
+    padding-right: 0px;
+}
+
+/* Removes the white background from the card view cards */
+.op-payment-widget-container.card-view > div.list {
+    background-color: transparent;
+}
+
+/* Removes margin from payment methods (excluding separators) */
+.op-payment-widget-container.card-view > div.list:not(.no-style) {
+    margin: 0;
+}
+
+/* Removes border from separators */
+.op-payment-widget-container.card-view > div.list.no-style {
+    border-bottom: none;
+}
+
+/* Applies a grid layout to the registered method*/
+.op-payment-widget-container.card-view .account-inside-cont {
+    grid-template-columns: auto 1fr auto;
+}
+
+/* Hides the radio input */
+.op-payment-widget-container.card-view .account-inside-cont input[type='radio'] {
+    grid-area: none;
+}
+
+/* Shows the registered method logo on left */
+.op-payment-widget-container.card-view .account-inside-cont label.imgLabel {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+/* Shows the registered method account info in available space in middle */
+.op-payment-widget-container.card-view .account-inside-cont label.textLabel {
+    grid-area: 1 / 2 / 2 / 3;
+    width: 100%;
+}
+
+/* Shows the delete icon on right */
+.op-payment-widget-container.card-view .account-inside-cont .delete-account {
+    grid-area: 1 / 3 / 2 / 5;
+    margin-top: 0px;
+    margin-right: 10px;
+}
+
+/* Shows the registered card iframe in row below */
+.op-payment-widget-container.card-view .account-inside-cont .formContainer {
+    grid-area: 2 / 1 / 3 / 4;
+    margin: 0;
+}
+
+/* Apply a small margin underneath error message in card view */
+.op-payment-widget-container.card-view > div.list.GLOBAL_ERROR {
+    margin-bottom: 0.5rem;
+}
+

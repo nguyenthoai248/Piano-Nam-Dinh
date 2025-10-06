@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<ruleset name="Inpsyde Coding Standard">
+    <rule ref="Inpsyde"/>
+    <rule ref="Inpsyde.CodeQuality.FunctionLength.TooLong">
+        <type>warning</type>
+    </rule>
+
+    <file>./src</file>
+    <file>./tests</file>
+
+    <rule ref="PSR12">
+        <exclude name="PSR12.Files.OpenTag.NotAlone"/>
+    </rule>
+
+    <arg name="extensions" value="php,inc" />
+
+    <config name="testVersion" value="7.0-"/>
+    <config name="ignore_warnings_on_exit" value="1"/>
+
+    <rule ref="PHPCompatibility">
+        <exclude name="PHPCompatibility.FunctionDeclarations.NewNullableTypes.returnTypeFound" />
+        <exclude name="PHPCompatibility.FunctionDeclarations.NewReturnTypeDeclarations.voidFound"/>
+        <exclude name="PHPCompatibility.Classes.NewConstVisibility.Found"/>
+        <exclude
+                name="PHPCompatibility.FunctionDeclarations.NewNullableTypes.typeDeclarationFound"
+        />
+        <exclude
+                name="PHPCompatibility.FunctionDeclarations.NewParamTypeDeclarations.iterableFound"
+        />
+        <exclude
+                name="PHPCompatibility.FunctionDeclarations.NewReturnTypeDeclarations.iterableFound"
+        />
+        <exclude name="PHPCompatibility.Lists.NewKeyedList.Found" />
+        <exclude name="PHPCompatibility.Lists.NewShortList.Found" />
+    </rule>
+
+    <rule ref="WordPress.PHP.StrictInArray.MissingArguments">
+        <type>warning</type>
+    </rule>
+</ruleset>

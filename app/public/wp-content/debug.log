@@ -1,0 +1,184 @@
+[06-Oct-2025 16:08:01 UTC] 🧩 AJAX type = featured
+[06-Oct-2025 16:08:01 UTC] 🧩 AJAX type = featured
+[06-Oct-2025 16:08:02 UTC] 🧩 AJAX type = featured
+[06-Oct-2025 16:08:02 UTC] 🧩 AJAX type = featured
+[06-Oct-2025 16:08:02 UTC] 🧩 AJAX type = featured
+[06-Oct-2025 16:08:02 UTC] 🧩 AJAX type = featured
+[06-Oct-2025 16:08:02 UTC] Cron reschedule event error for hook: litespeed_task_lqip, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"litespeed_filter","args":[],"interval":60}
+[06-Oct-2025 16:08:03 UTC] 🧩 AJAX type = featured
+[06-Oct-2025 16:08:03 UTC] 🧩 AJAX type = featured
+[06-Oct-2025 16:08:03 UTC] 🧩 AJAX type = featured
+[06-Oct-2025 16:10:52 UTC] 🧩 AJAX type = all
+[06-Oct-2025 16:10:52 UTC] 🧩 AJAX type = all
+[06-Oct-2025 16:10:52 UTC] 🧩 AJAX type = all
+[06-Oct-2025 16:10:52 UTC] 🧩 AJAX type = all
+[06-Oct-2025 16:10:52 UTC] 🧩 AJAX type = all
+[06-Oct-2025 16:10:52 UTC] 🧩 AJAX type = all
+[06-Oct-2025 16:10:52 UTC] 🧩 AJAX type = all
+[06-Oct-2025 16:10:52 UTC] 🧩 AJAX type = all
+[06-Oct-2025 16:10:52 UTC] 🧩 AJAX type = all
+[06-Oct-2025 16:17:13 UTC] Array
+(
+    [title] => Sản phẩm nổi bật
+    [subtitle] => 
+    [type] => featured
+)
+
+[06-Oct-2025 16:17:13 UTC] Array
+(
+    [title] => Sản phẩm nổi bật
+    [subtitle] => 
+    [type] => featured
+)
+
+[06-Oct-2025 16:17:13 UTC] Array
+(
+    [title] => Sản phẩm nổi bật
+    [subtitle] => 
+    [type] => featured
+)
+
+[06-Oct-2025 16:17:14 UTC] 🧩 AJAX type = featured
+[06-Oct-2025 16:17:14 UTC] 🧩 AJAX type = featured
+[06-Oct-2025 16:17:14 UTC] 🧩 AJAX type = featured
+[06-Oct-2025 16:17:14 UTC] 🧩 AJAX type = featured
+[06-Oct-2025 16:17:14 UTC] 🧩 AJAX type = featured
+[06-Oct-2025 16:17:14 UTC] 🧩 AJAX type = featured
+[06-Oct-2025 16:17:14 UTC] 🧩 AJAX type = featured
+[06-Oct-2025 16:17:14 UTC] 🧩 AJAX type = featured
+[06-Oct-2025 16:17:14 UTC] 🧩 AJAX type = featured
+[06-Oct-2025 16:21:17 UTC] Array
+(
+    [title] => Sản phẩm nổi bật
+    [subtitle] => Được nhiều khách hàng yêu thích
+    [type] => featured
+)
+
+[06-Oct-2025 16:21:17 UTC] Array
+(
+    [title] => Sản phẩm mới
+    [subtitle] => Vừa cập nhật gần đây
+    [type] => new
+)
+
+[06-Oct-2025 16:21:17 UTC] Array
+(
+    [title] => Sản phẩm bán chạy
+    [subtitle] => Bán nhiều nhất tuần này
+    [type] => best_selling
+)
+
+[06-Oct-2025 16:21:18 UTC] 🧩 AJAX type = new
+[06-Oct-2025 16:21:18 UTC] 🧩 AJAX type = featured
+[06-Oct-2025 16:21:18 UTC] 🧩 AJAX type = featured
+[06-Oct-2025 16:21:18 UTC] 🧩 AJAX type = best_selling
+[06-Oct-2025 16:21:18 UTC] 🧩 AJAX type = new
+[06-Oct-2025 16:21:18 UTC] 🧩 AJAX type = best_selling
+[06-Oct-2025 16:21:18 UTC] 🧩 AJAX type = new
+[06-Oct-2025 16:21:18 UTC] 🧩 AJAX type = featured
+[06-Oct-2025 16:21:18 UTC] 🧩 AJAX type = best_selling
+[06-Oct-2025 16:21:53 UTC] 🧩 AJAX type = featured
+[06-Oct-2025 16:21:53 UTC] 🧩 AJAX type = featured
+[06-Oct-2025 16:21:54 UTC] 🧩 AJAX type = featured
+[06-Oct-2025 16:22:04 UTC] 🧩 AJAX type = featured
+[06-Oct-2025 16:22:04 UTC] 🧩 AJAX type = featured
+[06-Oct-2025 16:22:04 UTC] 🧩 AJAX type = featured
+[06-Oct-2025 16:22:30 UTC] 🧩 AJAX type = featured
+[06-Oct-2025 16:22:30 UTC] 🧩 AJAX type = featured
+[06-Oct-2025 16:22:30 UTC] 🧩 AJAX type = featured
+[06-Oct-2025 16:22:39 UTC] 🧩 AJAX type = featured
+[06-Oct-2025 16:22:39 UTC] 🧩 AJAX type = featured
+[06-Oct-2025 16:22:39 UTC] 🧩 AJAX type = featured
+[06-Oct-2025 16:22:45 UTC] 🧩 AJAX type = featured
+[06-Oct-2025 16:22:45 UTC] 🧩 AJAX type = featured
+[06-Oct-2025 16:22:45 UTC] 🧩 AJAX type = featured
+[06-Oct-2025 16:26:13 UTC] Array
+(
+    [title] => Sản phẩm nổi bật
+    [subtitle] => Được nhiều khách hàng yêu thích
+    [type] => featured
+)
+
+[06-Oct-2025 16:26:13 UTC] Array
+(
+    [title] => Sản phẩm mới
+    [subtitle] => Vừa cập nhật gần đây
+    [type] => new
+)
+
+[06-Oct-2025 16:26:13 UTC] Array
+(
+    [title] => Sản phẩm bán chạy
+    [subtitle] => Bán nhiều nhất tuần này
+    [type] => best_selling
+)
+
+[06-Oct-2025 16:26:14 UTC] 🧩 AJAX type = featured
+[06-Oct-2025 16:26:14 UTC] 🧩 AJAX type = new
+[06-Oct-2025 16:26:14 UTC] 🧩 AJAX type = best_selling
+[06-Oct-2025 16:26:14 UTC] 🧩 AJAX type = featured
+[06-Oct-2025 16:26:14 UTC] 🧩 AJAX type = new
+[06-Oct-2025 16:26:14 UTC] 🧩 AJAX type = best_selling
+[06-Oct-2025 16:26:15 UTC] 🧩 AJAX type = featured
+[06-Oct-2025 16:26:15 UTC] 🧩 AJAX type = new
+[06-Oct-2025 16:26:15 UTC] 🧩 AJAX type = best_selling
+[06-Oct-2025 16:27:38 UTC] Array
+(
+    [title] => Sản phẩm nổi bật
+    [subtitle] => Được nhiều khách hàng yêu thích
+    [type] => featured
+)
+
+[06-Oct-2025 16:27:38 UTC] Array
+(
+    [title] => Sản phẩm mới
+    [subtitle] => Vừa cập nhật gần đây
+    [type] => new
+)
+
+[06-Oct-2025 16:27:38 UTC] Array
+(
+    [title] => Sản phẩm bán chạy
+    [subtitle] => Bán nhiều nhất tuần này
+    [type] => best_selling
+)
+
+[06-Oct-2025 16:27:39 UTC] 🧩 AJAX type = featured
+[06-Oct-2025 16:27:39 UTC] 🧩 AJAX type = new
+[06-Oct-2025 16:27:39 UTC] 🧩 AJAX type = best_selling
+[06-Oct-2025 16:27:39 UTC] 🧩 AJAX type = featured
+[06-Oct-2025 16:27:39 UTC] 🧩 AJAX type = new
+[06-Oct-2025 16:27:39 UTC] 🧩 AJAX type = best_selling
+[06-Oct-2025 16:27:39 UTC] 🧩 AJAX type = featured
+[06-Oct-2025 16:27:39 UTC] 🧩 AJAX type = new
+[06-Oct-2025 16:27:40 UTC] 🧩 AJAX type = best_selling
+[06-Oct-2025 16:47:05 UTC] Array
+(
+    [title] => Sản phẩm nổi bật
+    [subtitle] => Được nhiều khách hàng yêu thích
+    [type] => featured
+)
+
+[06-Oct-2025 16:47:05 UTC] Array
+(
+    [title] => Sản phẩm mới
+    [subtitle] => Vừa cập nhật gần đây
+    [type] => new
+)
+
+[06-Oct-2025 16:47:05 UTC] Array
+(
+    [title] => Sản phẩm bán chạy
+    [subtitle] => Bán nhiều nhất tuần này
+    [type] => best_selling
+)
+
+[06-Oct-2025 16:47:05 UTC] 🧩 AJAX type = featured
+[06-Oct-2025 16:47:05 UTC] 🧩 AJAX type = new
+[06-Oct-2025 16:47:06 UTC] 🧩 AJAX type = best_selling
+[06-Oct-2025 16:47:06 UTC] 🧩 AJAX type = featured
+[06-Oct-2025 16:47:06 UTC] 🧩 AJAX type = new
+[06-Oct-2025 16:47:06 UTC] 🧩 AJAX type = best_selling
+[06-Oct-2025 16:47:06 UTC] 🧩 AJAX type = featured
+[06-Oct-2025 16:47:06 UTC] 🧩 AJAX type = new
+[06-Oct-2025 16:47:06 UTC] 🧩 AJAX type = best_selling

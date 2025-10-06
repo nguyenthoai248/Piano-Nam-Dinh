@@ -7,7 +7,7 @@
 //Begin Really Simple Security key
 define('RSSSL_KEY', 'j66xuWIoisjo2ecNiSDMGCUkAgau1eiTj1QyZg62xBXuEwFLlT5Vy129d3TCjOrJ');
 //END Really Simple Security key
-define( 'WP_CACHE', true );
+define('WP_CACHE', true);
 /**
  * The base configuration for WordPress
  *
@@ -29,17 +29,17 @@ define( 'WP_CACHE', true );
  */
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'local' );
+define('DB_NAME', 'local');
 /** Database username */
-define( 'DB_USER', 'root' );
+define('DB_USER', 'root');
 /** Database password */
-define( 'DB_PASSWORD', 'root' );
+define('DB_PASSWORD', 'root');
 /** Database hostname */
-define( 'DB_HOST', 'localhost' );
+define('DB_HOST', 'localhost');
 /** Database charset to use in creating database tables. */
-define( 'DB_CHARSET', 'utf8' );
+define('DB_CHARSET', 'utf8');
 /** The database collate type. Don't change this if in doubt. */
-define( 'DB_COLLATE', '' );
+define('DB_COLLATE', '');
 /**#@+
  * Authentication unique keys and salts.
  *
@@ -51,15 +51,15 @@ define( 'DB_COLLATE', '' );
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY',          '},?O)<z|l`##X9n%,Hy&qDE3Q5I-on9wDu9;;=)$^[?&6Z4j2rIFMxATcp3<LWWE' );
-define( 'SECURE_AUTH_KEY',   'TeWhewU=Z}@(!d2$nB$8$+t./;7q{L^;ljI>F`EVm{9qj_pqv67K6A6zEL]}Nm^J' );
-define( 'LOGGED_IN_KEY',     'Tuu7<dR@b.~ec]b%h6_]J j^N?rs3,~Ku[6RpV)VXg:V.>X^^7>2mcvCmgp>KaAs' );
-define( 'NONCE_KEY',         'ikgp+:$-Zf4[Wwzt-j->^D @IFCY@6BIQ%ATlHYmMa]]2,0Gw7dD%74L3@D_d@9G' );
-define( 'AUTH_SALT',         '#Gen<NytB=nz.@DT[N)krpI&;RMo~8 @-rp?&,9Z3(h@/s!}`}oML!I9UMM:{${s' );
-define( 'SECURE_AUTH_SALT',  'dCdkKj2n>&$`nl#77ym@GdE]l;z1o{c8F<xg+MKL3Mihg?,ZD1,[u7_?SeW.=~%c' );
-define( 'LOGGED_IN_SALT',    '`G|8O,.UNu4X6JIec%oV@Z,+%}msBF%SZ>]c+T[;/EZEp_zSESZ5qOEJ=VL]hMhi' );
-define( 'NONCE_SALT',        'vsT)0u&?iw=$8r)Z`&2!xx<IRqt4aCXF)LN01dI)Cw{XU=*CAFVWw7Q~a5}jeSCh' );
-define( 'WP_CACHE_KEY_SALT', 'Rw%;.GEF-ynr4wmP<A/Ot7OVW$T3Q#:e+an}(k2QFk$Gz2K&TU/SQn@?%tNn?_am' );
+define('AUTH_KEY', '},?O)<z|l`##X9n%,Hy&qDE3Q5I-on9wDu9;;=)$^[?&6Z4j2rIFMxATcp3<LWWE');
+define('SECURE_AUTH_KEY', 'TeWhewU=Z}@(!d2$nB$8$+t./;7q{L^;ljI>F`EVm{9qj_pqv67K6A6zEL]}Nm^J');
+define('LOGGED_IN_KEY', 'Tuu7<dR@b.~ec]b%h6_]J j^N?rs3,~Ku[6RpV)VXg:V.>X^^7>2mcvCmgp>KaAs');
+define('NONCE_KEY', 'ikgp+:$-Zf4[Wwzt-j->^D @IFCY@6BIQ%ATlHYmMa]]2,0Gw7dD%74L3@D_d@9G');
+define('AUTH_SALT', '#Gen<NytB=nz.@DT[N)krpI&;RMo~8 @-rp?&,9Z3(h@/s!}`}oML!I9UMM:{${s');
+define('SECURE_AUTH_SALT', 'dCdkKj2n>&$`nl#77ym@GdE]l;z1o{c8F<xg+MKL3Mihg?,ZD1,[u7_?SeW.=~%c');
+define('LOGGED_IN_SALT', '`G|8O,.UNu4X6JIec%oV@Z,+%}msBF%SZ>]c+T[;/EZEp_zSESZ5qOEJ=VL]hMhi');
+define('NONCE_SALT', 'vsT)0u&?iw=$8r)Z`&2!xx<IRqt4aCXF)LN01dI)Cw{XU=*CAFVWw7Q~a5}jeSCh');
+define('WP_CACHE_KEY_SALT', 'Rw%;.GEF-ynr4wmP<A/Ot7OVW$T3Q#:e+an}(k2QFk$Gz2K&TU/SQn@?%tNn?_am');
 /**#@-*/
 /**
  * WordPress database table prefix.
@@ -81,14 +81,18 @@ $table_prefix = 'wp_';
  *
  * @link https://wordpress.org/support/article/debugging-in-wordpress/
  */
-if ( ! defined( 'WP_DEBUG' ) ) {
-	define( 'WP_DEBUG', false );
+if (!defined('WP_DEBUG')) {
+	define('WP_DEBUG', true);
+	define('WP_DEBUG_LOG', true);  // Ghi lỗi vào wp-content/debug.log
+	define('WP_DEBUG_DISPLAY', true); // Hiển thị lỗi ra màn hình (chỉ khi đang dev)
+	@ini_set('display_errors', 1);
+
 }
-define( 'WP_ENVIRONMENT_TYPE', 'local' );
+define('WP_ENVIRONMENT_TYPE', 'local');
 /* That's all, stop editing! Happy publishing. */
 /** Absolute path to the WordPress directory. */
-if ( ! defined( 'ABSPATH' ) ) {
-	define( 'ABSPATH', __DIR__ . '/' );
+if (!defined('ABSPATH')) {
+	define('ABSPATH', __DIR__ . '/');
 }
 /** Sets up WordPress vars and included files. */
 require_once ABSPATH . 'wp-settings.php';
