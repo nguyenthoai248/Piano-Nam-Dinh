@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none">
+  <!-- Thân thẻ -->
+  <rect x="8" y="16" width="48" height="32" rx="4" ry="4" 
+        stroke="#222" stroke-width="2" stroke-linejoin="round"/>
+  
+  <!-- Dải từ -->
+  <rect x="8" y="24" width="48" height="6" 
+        fill="#222"/>
+  
+  <!-- Hai ô nhỏ bên phải -->
+  <rect x="38" y="36" width="10" height="4" rx="1" ry="1" 
+        stroke="#222" stroke-width="2"/>
+  <rect x="50" y="36" width="6" height="4" rx="1" ry="1" 
+        stroke="#222" stroke-width="2"/>
+</svg>

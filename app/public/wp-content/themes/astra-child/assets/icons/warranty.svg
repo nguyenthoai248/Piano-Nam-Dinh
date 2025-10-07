@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none">
+  <!-- Hình khiên -->
+  <path d="M32 4L10 10v18c0 14.2 8.4 26.9 22 32 13.6-5.1 22-17.8 22-32V10L32 4z" 
+        stroke="#222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Dấu tick đảm bảo -->
+  <path d="M22 30l6 6 14-14" 
+        stroke="#222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

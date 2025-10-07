@@ -47,3 +47,12 @@ document.addEventListener("DOMContentLoaded", function () {
     lastScrollTop = st <= 0 ? 0 : st;
   });
 });
+
+jQuery(window).on('scroll', function(){
+  jQuery('.hp-blog-card').each(function(){
+    const top = jQuery(this).offset().top;
+    const scroll = jQuery(window).scrollTop() + jQuery(window).height();
+    if(scroll > top + 50) jQuery(this).addClass('visible');
+  });
+});
+

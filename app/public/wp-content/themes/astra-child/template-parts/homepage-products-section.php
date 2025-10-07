@@ -25,7 +25,8 @@ $categories = get_terms(['taxonomy' => 'product_cat', 'hide_empty' => true]);
     <div class="container">
         <h2 class="section-title"><?= esc_html($title) ?></h2>
         <?php if ($subtitle): ?>
-            <p class="section-subtitle"><?= esc_html($subtitle) ?></p><?php endif; ?>
+            <p class="section-subtitle"><?= esc_html($subtitle) ?></p>
+        <?php endif; ?>
 
         <div class="category-tabs">
             <ul class="tabs">
@@ -38,24 +39,29 @@ $categories = get_terms(['taxonomy' => 'product_cat', 'hide_empty' => true]);
 
         <div class="ajax-products">
             <div class="loading-spinner"></div>
-            <div class="product-grid"></div>
-            <div class="pagination"></div>
+            <div class="product-grid row g-0"></div>
+            <div class="text-center mt-4">
+                <button class="btn btn-outline-primary load-more-btn" style="display:none;">Xem thêm sản phẩm</button>
+            </div>
         </div>
+
     </div>
 </section>
 
+
 <script>
     jQuery(document).ready(function ($) {
-        function loadProducts($section, cat = "all", page = 1) {
+        const productSelectors = '.product-card, .product-item, .product';
+
+        function loadProducts($section, cat = "all", page = 1, append = false) {
             const type = $section.data("type");
             const $grid = $section.find(".product-grid");
-            const $pagination = $section.find(".pagination");
             const $spinner = $section.find(".loading-spinner");
+            const $button = $section.find(".load-more-btn");
 
-            $grid.addClass("loading");
             $spinner.addClass("active");
+            $button.hide();
 
-            $grid.fadeOut(200);
             $.post(
                 wpData.ajaxurl,
                 {
@@ -66,50 +72,75 @@ $categories = get_terms(['taxonomy' => 'product_cat', 'hide_empty' => true]);
                 },
                 function (response) {
                     try {
-                        const data = JSON.parse(response);
-                        $grid
-                            .removeClass("loading")
-                            .hide()
-                            .html(data.html)
-                            .fadeIn(400)
-                            .addClass("fade-in");
-                        $pagination.html(data.pagination);
+                        const data = typeof response === "object" ? response : JSON.parse(response);
+
+                        if (append) {
+                            // chỉ append khi có html mới
+                            if ($.trim(data.html) !== "") {
+                                $grid.append(data.html);
+                            }
+                        } else {
+                            $grid.hide().html(data.html).fadeIn(300);
+                        }
+
+                        // cập nhật page cho section này
+                        $section.data("paged", page);
+
+                        // cập nhật trạng thái nút Xem thêm
+                        if (data.has_more) {
+                            $button.show();
+                        } else {
+                            $button.hide();
+                        }
+
                     } catch (e) {
                         console.error("Lỗi parse JSON:", e, response);
                     }
+
                     $spinner.removeClass("active");
                 }
             );
         }
+
+        // Load ban đầu
+        $(".homepage-section").each(function () {
+            const $section = $(this);
+            $section.data("paged", 1);
+            loadProducts($section, "all", 1, false);
+        });
 
         // Khi click chọn category
         $(document).on("click", ".category-tabs .tab", function () {
             const $this = $(this);
             const $section = $this.closest(".homepage-section");
             const cat = $this.data("cat");
-            
 
             if ($this.hasClass("active")) return;
 
+            // active tab mới
             $this.addClass("active").siblings().removeClass("active");
-            loadProducts($section, cat, 1);
+
+            // reset page về 1
+            $section.data("paged", 1);
+
+            loadProducts($section, cat, 1, false);
         });
 
-        // Khi click chuyển trang
-        $(document).on("click", ".pagination a", function (e) {
-            e.preventDefault();
+        // Khi click "Xem thêm"
+        $(document).off("click", ".load-more-btn").on("click", ".load-more-btn", function () {
             const $this = $(this);
-            const page = $this.data("page");
-            if (!page) return;
             const $section = $this.closest(".homepage-section");
             const activeCat = $section.find(".category-tabs .tab.active").data("cat");
-            loadProducts($section, activeCat, page);
+
+            // Tăng page riêng cho từng section
+            let currentPage = $section.data("page") || 1;
+            currentPage++;
+            $section.data("page", currentPage);
+
+            loadProducts($section, activeCat, currentPage, true);
         });
 
-        // Khi load trang lần đầu -> load tất cả
-        $(".homepage-section").each(function () {
-            const $section = $(this);
-            loadProducts($section, "all", 1);
-        });
     });
+
+
 </script>
