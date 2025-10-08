@@ -593,7 +593,7 @@ Version: 1.0
   opacity: 0.6;
 }
 
-.tab.active{
+.tab.active {
   opacity: 1;
 }
 
@@ -678,11 +678,16 @@ Version: 1.0
 
 .product-image img {
   width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
   border-bottom: 2px solid #ffdd00;
 }
 
 .product-image {
   position: relative;
+  width: 100%;
+  height: 250px;
 }
 
 .sale-badge {
@@ -1246,7 +1251,7 @@ Version: 1.0
 .out-of-stock-badge {
   position: absolute;
   top: 10px;
-  left: 10px;
+  right: 10px;
   background: #777;
   color: #fff;
   font-size: 12px;
@@ -1356,4 +1361,223 @@ Version: 1.0
 .hp-blog-footer {
   text-align: center;
   margin-top: 24px;
+}
+
+.fab-container {
+  position: fixed;
+  bottom: 80px;
+  right: 20px; /* ✅ nằm góc phải */
+  z-index: 9999;
+}
+
+/* Nút chính */
+.fab-main {
+  background-color: #f9b233; /* vàng đồng bộ */
+  color: white;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: transform 0.3s ease; /* xoay */
+}
+
+/* hover nút chính */
+.fab-main:hover {
+  transform: scale(1.1);
+}
+
+/* Khi menu active, xoay + thành × */
+.fab-container.active .fab-main {
+  transform: rotate(45deg);
+}
+
+.fab-options {
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+}
+
+.fab-container.active .fab-options {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.fab-option {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background-color: #333;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  transition: background 0.3s, transform 0.2s;
+}
+
+.fab-option:hover {
+  background-color: #555;
+  transform: scale(1.1);
+}
+
+.lucide {
+  stroke: currentColor;
+}
+
+/* Contact Page Styles */
+.contact-page {
+  padding: 60px 20px;
+}
+.contact-hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.contact-hero h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+.contact-hero p {
+  font-size: 18px;
+  color: #555;
+}
+
+.contact-grid {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Form */
+.contact-form {
+  flex: 1;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: 0.3s;
+  font-size: 16px;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #f9b233;
+}
+.btn-submit {
+  background: #f9b233;
+  color: #fff;
+  padding: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+.btn-submit:hover {
+  background: #e09b1f;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+  cursor: default;
+}
+
+.info-item:hover {
+  background: rgba(249, 178, 51, 0.1); /* nền nhạt vàng */
+}
+
+.icon-wrapper {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, background 0.3s ease;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.info-item:hover .icon-wrapper {
+  transform: translateY(-5px);
+  background: #f9b233;
+}
+
+.icon {
+  width: 28px;
+  height: 28px;
+  stroke: #f9b233;
+  transition: stroke 0.3s ease;
+}
+
+.info-item:hover .icon {
+  stroke: #fff;
+}
+
+.info-item h3 {
+  margin: 0 0 5px;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.info-item p {
+  margin: 0;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+.info-item:hover h3,
+.info-item:hover p {
+  color: #f9b233;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-info {
+    gap: 20px;
+  }
+  .icon-wrapper {
+    width: 44px;
+    height: 44px;
+  }
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+  .contact-grid {
+    flex-direction: column;
+  }
 }

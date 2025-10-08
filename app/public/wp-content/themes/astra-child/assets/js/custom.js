@@ -56,3 +56,15 @@ jQuery(window).on('scroll', function(){
   });
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('contactForm');
+  if (form) { // kiểm tra nếu trang có form
+    form.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      alert('Cảm ơn bạn! Chúng tôi sẽ phản hồi sớm.');
+      form.reset();
+    });
+  }
+});
+
+

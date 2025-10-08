@@ -120,6 +120,60 @@
 </footer>
 
 <?php wp_footer(); ?>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const fabMain = document.getElementById('fabMain');
+        const fabContainer = document.querySelector('.fab-container');
+
+        fabMain.addEventListener('click', () => {
+            fabContainer.classList.toggle('active');
+        });
+    });
+</script>
+
+
+<!-- Multi Floating Action Button -->
+<div class="fab-container">
+    <div class="fab-main" id="fabMain" aria-label="Menu hỗ trợ">
+        <svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-plus" width="24" height="24" stroke="currentColor"
+            fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" x2="12" y1="5" y2="19" />
+            <line x1="5" x2="19" y1="12" y2="12" />
+        </svg>
+    </div>
+    <div class="fab-options">
+        <!-- Gọi điện -->
+        <a href="tel:0703553999" class="fab-option" title="Gọi điện">
+            <svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-phone" viewBox="0 0 24 24" width="24"
+                height="24" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-16.72-16.72A2 2 0 0 1 5.11 3h3a2 2 0 0 1 2 1.72c.12.81.37 1.6.73 2.34a2 2 0 0 1-.45 2.11l-1.27 1.27a16 16 0 0 0 6.29 6.29l1.27-1.27a2 2 0 0 1 2.11-.45c.74.36 1.53.61 2.34.73A2 2 0 0 1 22 16.92Z" />
+            </svg>
+        </a>
+
+        <!-- Xem bản đồ -->
+        <a href="https://maps.google.com" target="_blank" class="fab-option" title="Xem bản đồ">
+            <svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-map-pin" viewBox="0 0 24 24" width="24"
+                height="24" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0Z" />
+                <circle cx="12" cy="10" r="3" />
+            </svg>
+        </a>
+
+        <!-- Chat Zalo -->
+        <a href="https://zalo.me/0703553999" target="_blank" class="fab-option" title="Chat Zalo">
+            <svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-message-circle" viewBox="0 0 24 24" width="24"
+                height="24" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path
+                    d="M21 11.5a8.38 8.38 0 0 1-1.1 3.9 8.5 8.5 0 0 1-7.4 4.6 8.38 8.38 0 0 1-3.9-1.1L3 21l1.1-3.9a8.38 8.38 0 0 1-1.1-3.9 8.5 8.5 0 0 1 4.6-7.4 8.38 8.38 0 0 1 3.9-1.1 8.5 8.5 0 0 1 7.4 4.6 8.38 8.38 0 0 1 1.1 3.9Z" />
+            </svg>
+        </a>
+    </div>
+</div>
+
 </body>
 
 </html>
