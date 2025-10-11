@@ -36,7 +36,7 @@
                     <h3 class="title-footer mb-3">Thông tin liên hệ</h3>
                     <ul class="list-unstyled mb-0">
                         <li><b>Địa chỉ:</b> Xóm 14, Xã Hải Hưng, Tỉnh Ninh Bình, Việt Nam</li>
-                        <li><b>Điện thoại:</b> 070 3553 999</li>
+                        <li><b>Điện thoại:</b> 070 3553 999 | 094 2375 558</li>
                         <li><b>Email:</b> info@pianonamdinh.com.vn</li>
                         <li><b>Thời gian phục vụ:</b> 8:00 - 20:00</li>
                     </ul>
@@ -69,8 +69,8 @@
                 <div class="col-lg-3 col-md-6 mb-4 widget-footer">
                     <h3 class="title-footer mb-3">Gọi mua hàng</h3>
                     <p><strong>Tổng đài hỗ trợ:</strong> (Miễn phí gọi)</p>
-                    <p>Gọi mua: <a href="tel:0703553999">070 3553 999</a> (8:00 - 20:00)</p>
-                    <p>Bảo hành: <a href="tel:0703553999">070 3553 999</a> (8:30 - 17:30)</p>
+                    <p>Gọi mua: <a href="tel:0703553999">070 3553 999</a> | <a href="tel:0942375558">094 2375 558</a> (8:00 - 20:00)</p>
+                    <p>Bảo hành: <a href="tel:0703553999">070 3553 999</a> | <a href="tel:0942375558">094 2375 558</a> (8:30 - 17:30)</p>
 
                     <h3 class="title-footer mt-4">Kết nối với chúng tôi</h3>
                     <ul class="footerNav-social list-unstyled d-flex gap-2">
